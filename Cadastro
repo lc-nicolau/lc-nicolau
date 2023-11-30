@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+    int idade;
+    string nome, sobrenome;
+    char continuar;
+    
+    setlocale(LC_ALL, "Portuguese");
+    
+    do {
+        cout << "Insira sua idade (somente maiores de 18 anos): ";
+        cin >> idade;
+        
+        cin.ignore();
+        
+        if (idade >= 18.0) {
+            cout << "Insira o primeiro nome: ";
+            getline(cin, nome);
+            
+            cout << "Insira o sobrenome: ";
+            getline(cin, sobrenome);
+            
+            cout << "A idade é: " << idade << " anos" << endl; 
+            cout << "O nome completo é: " << nome << " " << sobrenome << endl;
+            
+            cout << "Deseja continuar? (s/n): ";
+            cin >> continuar;
+            
+        } else {
+            cout << "Idade inválida!" << endl;
+        }
+        
+    } while (continuar == 's' || continuar == 'S'); 
+    
+    return 0;
+}
+
+
