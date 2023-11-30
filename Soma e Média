@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main () {
+    int aux;
+    float soma, media;
+    
+    soma = 0;
+    
+    for (aux = 1; aux <= 10; aux++) {
+        cout << endl << "Número: " << aux;
+        
+        soma = soma + aux;
+        media = soma / aux;
+    }
+    
+    cout << endl << "A soma é " << soma << " e a média é " << media;
+    
+    return 0;
+}
